@@ -3,4 +3,11 @@ Sub Preparer()
     '
     ' Description:
     '     Prepare file for cutter plotter
+    MsgBox "IT works!"
+
+    '---------------------------------------------------------------------------
+    'Move objects 0,3mm to left
+    'ActiveSelection.Move -0.011811, 0#
+    'Move objects 0,5mm to top
+    'ActiveSelection.Move 0#, 0.019685
 End Sub
