@@ -7,7 +7,7 @@ Sub Preparer()
 
     '---------------------------------------------------------------------------
     'Move objects 0,3mm to the left
-    'ActiveSelection.Move -0.011811, 0#
+    ActiveSelection.Move -0.011811, 0#
     'Move objects 0,5mm to the top
-    'ActiveSelection.Move 0#, 0.019685
+    ActiveSelection.Move 0#, 0.019685
 End Sub
