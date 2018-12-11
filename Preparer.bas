@@ -3,7 +3,6 @@ Sub Preparer()
     '
     ' Description:
     '     Prepare file for cutter plotter
-    MsgBox "IT works!"
 
     '---------------------------------------------------------------------------
     'Move objects 0,3mm to the left
