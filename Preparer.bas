@@ -11,7 +11,7 @@ Sub Preparer()
     Dim sr As new ShapeRange
     For Each s In ActivePage.Shapes.FindShapes()
       If s.Fill.Type = cdrNoFill Then
-        sr.Add
+        sr.Add s
       End If
     Next s
 
