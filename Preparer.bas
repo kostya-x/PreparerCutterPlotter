@@ -15,6 +15,8 @@ Sub Preparer()
       End If
     Next s
 
+    sr.CreateSelection 'make selection of every object in sr
+
     'Move objects 0,3mm to the left
     ActiveSelection.Move -0.011811, 0#
     'Move objects 0,5mm to the top
