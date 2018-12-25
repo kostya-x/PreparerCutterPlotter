@@ -5,6 +5,22 @@ Sub Preparer()
     '     Prepare file for cutter plotter
 
     '---------------------------------------------------------------------------
+    'Correct color for marks
+    Dim trueMakrsColor As New Color
+    trueMakrsColor.RGBAssign 30, 24, 21
+
+    'Set correct color for marks
+    Dim marks As Shape
+    Dim newMarks as New ShapeRange
+    For Each marks In ActivePage.Shapes.FindShapes()
+      If Not marks.Fill.Type = cdrNoOutline Then
+        newMarks.Add marks
+      End If
+    Next marks
+    newMarks.CreateSelection
+    newMarks.SetOutlineProperties cdrNoOutline
+    newMarks.ApplyUniformFill trueMakrsColor
+
     'Delete all guidelines
     Dim gl As New ShapeRange
     Dim sgl As Shape
