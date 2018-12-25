@@ -27,6 +27,8 @@ Sub Preparer()
 
     sr.SetOutlineProperties 0.003 'Change abris thickness to hairline
 
+    sr.Group 'Make a group of objects
+
     'Move objects 0,3mm to the left
     ActiveSelection.Move -0.011811, 0#
     'Move objects 0,5mm to the top
