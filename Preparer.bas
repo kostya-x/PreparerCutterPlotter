@@ -5,6 +5,14 @@ Sub Preparer()
     '     Prepare file for cutter plotter
 
     '---------------------------------------------------------------------------
+    'Delete all guidelines
+    Dim gl As New ShapeRange
+    Dim sgl As Shape
+    For Each sgl In ActivePage.FindShapes(Type:=cdrGuidelineShape)
+    gl.Add sgl
+    Next sgl
+    gl.Delete
+
     Dim s As Shape
     'Pick every object in active page and put it in "array" sr...
     '...if the object does not have a fill
