@@ -29,6 +29,9 @@ Sub Preparer()
     Next sgl
     gl.Delete
 
+    Dim colorForCuttingLine As New Color
+    colorForCuttingLine.RGBAssign 102, 51, 51
+
     Dim s As Shape
     'Pick every object in active page and put it in "array" sr...
     '...if the object does not have a fill
@@ -49,4 +52,6 @@ Sub Preparer()
     ActiveSelection.Move -0.011811, 0#
     'Move objects 0,5mm to the top
     ActiveSelection.Move 0#, 0.019685
+
+    sr.SetOutlineProperties color:=colorForCuttingLine
 End Sub
